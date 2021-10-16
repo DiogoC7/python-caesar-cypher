@@ -2,13 +2,7 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 a = 0
-
-while a == 0:
-  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-  text = input("Type your message:\n").lower()
-  shift = int(input("Type the shift number:\n"))
-
-  def encrypt(text, shift):
+def encrypt(text, shift):
     word = []
     indexWord = 0
 
@@ -28,7 +22,7 @@ while a == 0:
 
     print(display)
 
-  def decrypt(text, shift):
+def decrypt(text, shift):
     word = []
     indexWord = 0
 
@@ -47,6 +41,12 @@ while a == 0:
       display += x
 
     print(display)
+
+while a == 0:
+  
+  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+  text = input("Type your message:\n").lower()
+  shift = int(input("Type the shift number:\n"))
 
   if direction == "encode":
     encrypt(text, shift)
